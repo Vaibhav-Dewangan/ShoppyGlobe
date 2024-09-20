@@ -47,6 +47,14 @@ function Search() {
 
 
     };
+    
+     if (error) {
+        return (
+          <div className="flex justify-center items-center min-h-screen">
+            <p className="text-lg font-semibold text-red-500">Error loading products. Please try again later.</p>
+          </div>
+        );
+      }
 
     return(
         <div className="Search-container min-h-screen">

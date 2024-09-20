@@ -1,20 +1,39 @@
 import React from "react";
 import useFetchData from "../hooks/useFetch";
 import ProductItem from "./ProductItem";
+import { useMemo } from "react";
 
 function ProductList(){
 
     const url = "https://dummyjson.com/products";
     const {data, error, loading} = useFetchData(url);
     
-
-    const beauty = data.filter((items)=>items.category === "beauty");
-    const fragrances = data.filter((items)=>items.category === "fragrances");
-    const furniture = data.filter((items)=>items.category === "furniture");
-    const groceries = data.filter((items)=>items.category === "groceries");
-
     
+    const beauty = useMemo(() => data.filter((items)=>items.category === "beauty"),[data]);
+    const fragrances = useMemo(() => data.filter((items)=>items.category === "fragrances"),[data]);
+    const furniture = useMemo(() => data.filter((items)=>items.category === "furniture"),[data]);
+    const groceries = useMemo(() => data.filter((items)=>items.category === "groceries"),[data]);
 
+    if (loading) {
+        return (
+          <div className="flex justify-center items-center min-h-screen">
+            <img
+              src="/loading.gif"
+              alt="Loading"
+              className="w-10 h-10 lg:w-14 lg:h-14 mb-4"
+            />
+            <p className="text-lg font-semibold text-gray-500 ml-4">Loading products...</p>
+          </div>
+        );
+      }
+    
+      if (error) {
+        return (
+          <div className="flex justify-center items-center min-h-screen">
+            <p className="text-lg font-semibold text-red-500">Error loading products. Please try again later.</p>
+          </div>
+        );
+      }
 
     return(
         <>

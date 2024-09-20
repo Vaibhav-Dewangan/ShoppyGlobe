@@ -10,6 +10,9 @@ function useFetchData(url) {
         const fetchData = async () =>{
             try{
             const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+              }
             const jsonData = await response.json();
             setData(jsonData.products);
             } catch (error){
