@@ -40,9 +40,9 @@ function CartItem(props){
    
 
     return(
-        <div key={props.item.id} className="CartItem w-full h-auto  rounded-lg border-2 p-2 flex sm:justify-around ">
-        <img src={props.item.image} alt={props.item.title} className="w-24 lg:w-40 lg:h-40 max-sm:flex-1 h-24 sm:w-32 sm:h-32  " />
-        <div className="ml-4 max-sm:flex-2 ">
+        <div key={props.item.id} className="CartItem w-full h-auto  rounded-lg border-2 p-2 flex justify-around ">
+        <img src={props.item.image} alt={props.item.title} className="w-24 lg:w-40 lg:h-40  h-24 sm:w-32 sm:h-32  " />
+        <div className="ml-4 w-44 sm:w-60 ">
             <h2 className="text-md font-bold lg:text-lg ">{props.item.title}</h2>
             <h2 className="text-sm text-gray-600 lg:text-md ">Brand:{props.item.brand}</h2>
             <h2 className="text-sm text-gray-600 lg:text-md ">{props.item.shipping}</h2>
@@ -51,14 +51,14 @@ function CartItem(props){
             <p>Quantity:  {quantity}</p>
             </div>
 
-            <div className="mt-4 flex flex-row justify-between">
+            <div className="mt-4 flex flex-row justify-between md:pr-5">
 
                 <div className="flex flex-row gap-3 lg:gap-5 ">
                 <button onClick={handleMinus} className="text-red-500"><FontAwesomeIcon icon={faMinus} /></button>
                 <button onClick={handlePlus} className="text-green-500"><FontAwesomeIcon icon={faPlus} /></button>
                 </div>
     
-             <button onClick={handleRemoveItem} className="bg-red-500 text-white text-sm p-1 pr-5 pl-5 rounded-lg hover:bg-blue-600 active:scale-95">
+             <button onClick={handleRemoveItem} className="bg-red-500 text-white text-sm p-1 pr-4 pl-4 rounded-lg hover:bg-blue-600 active:scale-95">
               Remove 
              </button>
             </div>

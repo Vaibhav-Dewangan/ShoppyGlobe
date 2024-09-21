@@ -9,7 +9,8 @@ import './index.css'
 
 const Cart = lazy(()=> import ('./Components/Cart.jsx'));
 const Search = lazy(()=> import('./Components/Search.jsx'));
-const ProductDetails = lazy(()=> import('./Components/ProductDetail.jsx'))
+const ProductDetails = lazy(()=> import('./Components/ProductDetail.jsx'));
+const About = lazy(()=> import('./Components/About.jsx'));
 
 const appRouter = createBrowserRouter([
 
@@ -29,6 +30,16 @@ const appRouter = createBrowserRouter([
           <img className="lg:w-10 mx-auto my-auto "src="/loading.gif" alt="loading" />
         </div> }>
           <Cart />
+        </Suspense>),
+      },
+      {
+        path:"/About",
+        element:(
+        <Suspense fallback={ 
+        <div className="min-h-screen">
+          <img className="lg:w-10 mx-auto my-auto "src="/loading.gif" alt="loading" />
+        </div> }>
+          <About />
         </Suspense>),
       },
       {

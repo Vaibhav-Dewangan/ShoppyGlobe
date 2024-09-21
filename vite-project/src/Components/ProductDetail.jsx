@@ -97,7 +97,7 @@ function ProductDetails(){
              </div>
 
              {/* Buttons */}
-             <div className="mt-6 flex flex-row justify-evenly items-center max-md:p-2 border-t   fixed left-0 bottom-0 right-0 bg-blue-400 h-14  lg:h-16  p-1 pt-2  w-full ">
+             <div className="mt-6 flex flex-row justify-evenly items-center max-md:p-2 border-t   fixed left-0 bottom-0 right-0 bg-gray-300 h-14  lg:h-16  p-1 pt-2  w-full ">
              <Link className="  p-2 bg-white pr-5 pl-5 rounded-lg border-black max-sm:hidden " >
                Price: <span className="text-green-600 font-semibold">${updatedData.price}</span>
              </Link>

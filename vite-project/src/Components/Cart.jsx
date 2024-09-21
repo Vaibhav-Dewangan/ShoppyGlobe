@@ -44,7 +44,7 @@ function Cart() {
                 </div>
             )}
 
-            <div className="fixed bottom-0 left-0 right-0 h-14 lg:h-16 bg-blue-400 w-full flex justify-evenly items-center  pr-5 pl-5 pt-2 border-t ">
+            <div className="fixed bottom-0 left-0 right-0 h-14 lg:h-16 bg-gray-300 w-full flex justify-evenly items-center  pr-5 pl-5 pt-2 border-t ">
             <Link className="  p-1 bg-white pr-5 pl-5 rounded-lg border-black " >
                Total : <span className="text-green-600 font-semibold"> $ {totalPrice}</span>
              </Link>
