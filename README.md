@@ -40,6 +40,7 @@ The application employs React Router for seamless navigation between pages:
 - Product Details (/products/productDetails/:id): Shows detailed information for a specific product.
 - Cart (/Cart): Allows users to view and manage items in their shopping cart.
 - Search (/Search): Displays results based on user search queries.
+- About (/About): Displays information about the company.
 - 404 Page: Redirects to a user-friendly error page for invalid routes.
 
 ### Conclusion
