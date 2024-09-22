@@ -11,7 +11,11 @@ function Cart() {
 
     console.log(cartItems);
 
+    // calculating total price
+
     const totalPrice = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+
+    // handle clear cart
     
     function handleClearCart(){
         dispatch(clearCart());

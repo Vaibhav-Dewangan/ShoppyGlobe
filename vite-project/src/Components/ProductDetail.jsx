@@ -15,6 +15,8 @@ function ProductDetails(){
     const {id} = useParams(); 
     const dispatch = useDispatch();
 
+    // Finding the product details from id
+
     const updatedData = data.find(item => item.id === Number(id));
     
     useEffect(() => {
@@ -27,6 +29,7 @@ function ProductDetails(){
       
     }, [data, id]);
     
+    // handle loading
 
     if (loading) return(
 
@@ -43,12 +46,16 @@ function ProductDetails(){
 
      );
 
+    // handle error
+
     if (error) return (
       <div className="min-h-screen " >
         <p className="lg:w-10 mx-auto my-auto ">Error loading product details.</p>
       </div>
     ); 
   
+    // handle Add to cart
+
     const handleAddToCart = ()=>{
       const cartItem = {
         id: updatedData.id,

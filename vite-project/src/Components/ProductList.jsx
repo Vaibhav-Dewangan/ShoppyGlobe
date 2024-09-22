@@ -5,6 +5,8 @@ import { useMemo } from "react";
 
 function ProductList(){
 
+    // Fetching url
+
     const url = "https://dummyjson.com/products";
     const {data, error, loading} = useFetchData(url);
     
@@ -13,6 +15,8 @@ function ProductList(){
     const fragrances = useMemo(() => data.filter((items)=>items.category === "fragrances"),[data]);
     const furniture = useMemo(() => data.filter((items)=>items.category === "furniture"),[data]);
     const groceries = useMemo(() => data.filter((items)=>items.category === "groceries"),[data]);
+
+    // Handle Loading
 
     if (loading) {
         return (
@@ -26,6 +30,8 @@ function ProductList(){
           </div>
         );
       }
+
+    // handle error
     
       if (error) {
         return (

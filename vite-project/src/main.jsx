@@ -7,6 +7,8 @@ import App from './App.jsx'
 import NotFound from './Components/NotFound.jsx'
 import './index.css'
 
+// components with lazy loading
+
 const Cart = lazy(()=> import ('./Components/Cart.jsx'));
 const Search = lazy(()=> import('./Components/Search.jsx'));
 const ProductDetails = lazy(()=> import('./Components/ProductDetail.jsx'));

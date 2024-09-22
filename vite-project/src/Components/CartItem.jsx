@@ -12,14 +12,20 @@ function CartItem(props){
     const cartItems = useSelector((state) => state.Cart.items); 
 
     const [quantity, setQuantity] = useState(props.item.quantity); 
+
+    // handle same product add on
     
     if(cartItems.id === props.item.id){
         return handlePlus();
     }
     
+    // handle remove item
+
     function handleRemoveItem(){
         dispatch(removeItem(props.item.id));
     };
+
+    // handle quantity +, - 
 
     function handlePlus(){
         if(quantity < 10){

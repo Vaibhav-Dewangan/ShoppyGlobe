@@ -15,7 +15,8 @@ function Search() {
     const[searchFilter, setSearchFilter] = useState([]);
     const[hiddenCss, setHiddenCss] = useState("");
 
-   
+    // handle OnChange
+
     function SearchInputOnChange(e){
         const value = e.target.value;
         setSearchInput(value);
@@ -41,6 +42,8 @@ function Search() {
 
     },[searchInput])
 
+    // Handle Search Click
+
     function handleClick(){
 
         const searched = data.filter((item) => item.title.toLowerCase().includes(value.toLocaleLowerCase()));
@@ -49,6 +52,8 @@ function Search() {
 
     };
     
+    // handle error
+
      if (error) {
         return (
           <div className="flex justify-center items-center min-h-screen">
@@ -67,7 +72,7 @@ function Search() {
 
             </section>
             
-           
+           {/* Section with conditions */}
             <section  className={hiddenCss}>
             <h2 className="font-bold  lg:text-xl pr-6 pl-6 sm:pl-10 lg:pr-20 lg:pl-20  ">Searches</h2>
             {searchFilter.length === 0 && searchInput ? (

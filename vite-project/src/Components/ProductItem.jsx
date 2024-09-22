@@ -5,6 +5,8 @@ function ProductItem(props){
 
     const [ItemImage, setItemImage] = useState(props.itemImage);
 
+    // handling image with more than one link
+
     if(ItemImage.length > 1){
         setItemImage([props.itemImage[1]]);
 
