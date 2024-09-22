@@ -4,7 +4,8 @@
 Shoppy Globe is a modern e-commerce platform built with React, designed to offer users a seamless shopping experience. Users can browse a wide range of products, add them to their cart, search for specific items, and manage their orders. 
 
 ## Features
-- Browse Products by Category: Easily navigate through categories like Electronics, Fashion, Home Goods, and more.
+- Browse Products by Category: Easily navigate through categories like Beauty, Furniture, Home Goods, and more.
+
 - Product Details: View detailed information about each product, including images, descriptions, prices, and ratings.
 - Add to Cart: Effortlessly add items to your shopping cart for easy checkout.
 - Search Functionality: Quickly find products by their titles or categories using the search bar.
